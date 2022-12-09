@@ -1,0 +1,30 @@
+@use '../abstract/index' as *;
+
+footer {
+  position: relative;
+  top: 2em;
+  font-size: $small;
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: $very-dark-grayish-blue;
+  @include animate(slide-up, 2.5s, ease-in, 1);
+  transition: $transition;
+
+  & span.heart {
+    filter: invert(33%) sepia(11%) saturate(1047%) hue-rotate(178deg)
+      brightness(91%) contrast(90%);
+  }
+  & a {
+    font-weight: $medium;
+    transition: $transition;
+  }
+  & a:link,
+  & a:hover,
+  & a:visited,
+  & a:active {
+    text-decoration: none;
+  }
+  & a:hover {
+    color: $moderate-violet;
+  }
+}

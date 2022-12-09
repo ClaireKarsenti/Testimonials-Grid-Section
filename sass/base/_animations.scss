@@ -1,0 +1,45 @@
+@use '../abstract/index' as *;
+
+@include keyframes(slide-down) {
+  0% {
+    opacity: 0;
+    transform: translate(0, -70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@include keyframes(slide-up) {
+  0% {
+    opacity: 0;
+    transform: translate(0, 70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@include keyframes(slide-right) {
+  0% {
+    opacity: 0;
+    transform: translate(-70px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@include keyframes(slide-left) {
+  0% {
+    opacity: 0;
+    transform: translate(70px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

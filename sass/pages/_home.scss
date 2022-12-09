@@ -1,0 +1,189 @@
+@use '../abstract/index' as *;
+
+/*
+=============== 
+TESTIMONIAL CARDS
+===============
+*/
+/**** SPECIFIC STYLING ****/
+.card {
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0.0625rem 0.9375rem 0.25rem $very-dark-gray;
+  transition: $transition;
+
+  /* ***DESKTOP*** */
+  @include media-min(62.5em) {
+    padding: 1.875rem;
+  }
+
+  &__daniel {
+    color: $white;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: left 80% top 0%;
+    transition: $transition;
+    background-color: $moderate-violet;
+    @include animate(slide-down, 1.5s, ease-in, 1);
+
+    /* ***TABLET*** */
+    @include media-min(31.25em) {
+      grid-area: daniel;
+      @include animate(slide-up, 1.5s, ease-in, 1);
+    }
+    /* ***DESKTOP*** */
+    @include media-min(62.5em) {
+      grid-area: daniel;
+      @include animate(slide-down, 1.5s, ease-in, 1);
+    }
+  }
+
+  &__jonathan {
+    color: $white;
+    background-color: $very-dark-grayish-blue;
+    @include animate(slide-left, 1.3s, ease-in, 1);
+
+    /* ***TABLET*** */
+    @include media-min(31.25em) {
+      grid-area: jonathon;
+      @include animate(slide-down, 1.3s, ease-in, 1);
+    }
+    /* ***DESKTOP*** */
+    @include media-min(62.5em) {
+      grid-area: jonathon;
+    }
+  }
+
+  &__jeanette {
+    color: $very-dark-blackish-blue;
+    background-color: $gray;
+    @include animate(slide-right, 1.3s, ease-in, 1);
+
+    /* ***TABLET*** */
+    @include media-min(31.25em) {
+      grid-area: jeanette;
+      @include animate(slide-down, 1.3s, ease-in, 1);
+    }
+    /* ***DESKTOP*** */
+    @include media-min(62.5em) {
+      grid-area: jeanette;
+      @include animate(slide-right, 1.3s, ease-in, 1);
+    }
+  }
+
+  &__patrick {
+    color: $white;
+    background-color: $very-dark-blackish-blue;
+    @include animate(slide-left, 1.8s, ease-in, 1);
+
+    /* ***TABLET*** */
+    @include media-min(31.25em) {
+      grid-area: patrick;
+      @include animate(slide-up, 1.8s, ease-in, 1);
+    }
+    /* ***DESKTOP*** */
+    @include media-min(62.5em) {
+      grid-area: patrick;
+    }
+  }
+
+  &__kira {
+    color: $very-dark-blackish-blue;
+    background-color: $gray;
+    @include animate(slide-up, 1.5s, ease-in, 1);
+
+    /* ***TABLET*** */
+    @include media-min(31.25em) {
+      grid-area: kira;
+      @include animate(slide-right, 1.5s, ease-in, 1);
+    }
+    /* ***DESKTOP*** */
+    @include media-min(62.5em) {
+      grid-area: kira;
+      @include animate(slide-left, 1.5s, ease-in, 1);
+    }
+  }
+
+  /* HOVER STATE */
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  /**** MULTI STYLING ****/
+  figcaption {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__headshot {
+    max-width: 1.875rem;
+    border-radius: 3.125rem;
+
+    &--lightWhite {
+      @include imgBorder($white-50);
+    }
+
+    &--grey {
+      @include imgBorder($light-gray);
+    }
+
+    &--violet {
+      @include imgBorder($moderate-violet);
+    }
+  }
+
+  &__testimonial {
+    &--name {
+      font-size: $small;
+      font-weight: $medium;
+      text-transform: capitalize;
+    }
+
+    &--white,
+    &--blue {
+      font-size: $very-small;
+      font-weight: $regular;
+      text-transform: capitalize;
+    }
+
+    &--white {
+      color: $white-50;
+    }
+
+    &--blue {
+      color: $very-dark-blackish-blue-50;
+    }
+  }
+}
+
+.quote {
+  &__bold {
+    font-size: $big;
+    font-weight: $medium;
+    margin-bottom: 1.7rem;
+    transition: $transition;
+  }
+
+  &__light {
+    font-size: $small;
+    font-weight: $regular;
+    line-height: 1.6;
+    transition: $transition;
+
+    &--jonathan,
+    &--patrick {
+      color: $white-70;
+    }
+    &--daniel {
+      @extend .quote__light--jonathan;
+      opacity: 0.6;
+    }
+    &--jeanette,
+    &--kira {
+      color: $very-dark-blackish-blue-70;
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/*_____ COLORS _____*/
+/* Primary */
+$moderate-violet: hsl(263.1, 55.1%, 52%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$very-dark-blackish-blue-70: hsl(219, 29%, 14%, 0.6);
+$very-dark-blackish-blue-50: hsl(219, 29%, 14%, 0.6);
+$very-dark-gray: rgba(0, 0, 0, 0.1);
+
+/* Neutral */
+$white: hsl(0, 0%, 100%);
+$white-70: hsl(0, 0%, 100%, 0.7);
+$white-50: hsl(0, 0%, 100%, 0.5);
+$gray: rgba(255, 255, 255, 0.55);
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+/* Transition */
+$transition: 0.8s ease-in-out;
+
+/*_____ FONTS _____ */
+/* Font-size */
+$very-small: clamp(0.75rem, calc(0.9rem + 0.51vw), 0.8rem);
+$small: clamp(0.8125rem, calc(0.9rem + 0.51vw), 0.82rem);
+$big: clamp(1.2rem, calc(0.9rem + 0.51vw), 1.25rem);
+
+/* Font-weight */
+$regular: 500;
+$medium: 600;
