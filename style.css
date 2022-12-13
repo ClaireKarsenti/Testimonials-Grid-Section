@@ -107,6 +107,7 @@ body {
 
 .testimonial-container {
   display: grid;
+  min-width: 17rem;
   max-width: 69rem;
   gap: 1.25rem;
   /* ***TABLET*** */
@@ -226,21 +227,12 @@ TESTIMONIAL CARDS
     padding: 1.875rem;
   }
   .card__daniel {
-    grid-area: daniel;
     animation: slide-down 1.5s ease-in 1;
   }
-  .card__jonathan {
-    grid-area: jonathon;
-  }
   .card__jeanette {
-    grid-area: jeanette;
     animation: slide-right 1.3s ease-in 1;
   }
-  .card__patrick {
-    grid-area: patrick;
-  }
   .card__kira {
-    grid-area: kira;
     animation: slide-left 1.5s ease-in 1;
   }
 }

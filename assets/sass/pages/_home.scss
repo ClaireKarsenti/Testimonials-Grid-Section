@@ -76,21 +76,12 @@ TESTIMONIAL CARDS
   @include media-min(62.5em) {
     padding: 1.875rem;
     &__daniel {
-      grid-area: daniel;
       @include animate(slide-down, 1.5s, ease-in, 1);
     }
-    &__jonathan {
-      grid-area: jonathon;
-    }
     &__jeanette {
-      grid-area: jeanette;
       @include animate(slide-right, 1.3s, ease-in, 1);
     }
-    &__patrick {
-      grid-area: patrick;
-    }
     &__kira {
-      grid-area: kira;
       @include animate(slide-left, 1.5s, ease-in, 1);
     }
   }
