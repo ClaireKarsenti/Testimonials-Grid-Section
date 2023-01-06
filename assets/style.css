@@ -170,11 +170,8 @@ TESTIMONIAL CARDS
 }
 .card__daniel {
   color: hsl(0deg, 0%, 100%);
-  background-image: url(./images/bg-pattern-quotation.svg);
-  background-repeat: no-repeat;
-  background-position: left 80% top 0%;
+  background: hsl(263.1deg, 55.1%, 52%) url(./images/bg-pattern-quotation.svg) no-repeat left 80% top 0%;
   transition: 0.8s ease-in-out;
-  background-color: hsl(263.1deg, 55.1%, 52%);
   animation: slide-down 1.5s ease-in 1;
 }
 .card__jonathan {

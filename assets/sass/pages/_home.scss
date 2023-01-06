@@ -14,11 +14,8 @@ TESTIMONIAL CARDS
 
   &__daniel {
     color: $white;
-    background-image: url(./images/bg-pattern-quotation.svg);
-    background-repeat: no-repeat;
-    background-position: left 80% top 0%;
+    background: $moderate-violet url(./images/bg-pattern-quotation.svg) no-repeat left 80% top 0%;
     transition: $transition;
-    background-color: $moderate-violet;
     @include animate(slide-down, 1.5s, ease-in, 1);
   }
   &__jonathan {
