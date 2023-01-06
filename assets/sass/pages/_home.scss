@@ -13,29 +13,29 @@ TESTIMONIAL CARDS
   transition: $transition;
 
   &__daniel {
-    color: set-color($moderate-violet);
+    color: set-color($moderate-violet); //white
     background: $moderate-violet url(./images/bg-pattern-quotation.svg)
       no-repeat left 80% top 0%;
     transition: $transition;
     @include animate(slide-down, 1.5s, ease-in, 1);
   }
   &__jonathan {
-    color: set-color($very-dark-grayish-blue);
+    color: set-color($very-dark-grayish-blue); //white
     background-color: $very-dark-grayish-blue;
     @include animate(slide-left, 1.3s, ease-in, 1);
   }
   &__jeanette {
-    color: set-color($gray);
+    color: set-color($gray); //dark blue
     background-color: $gray;
     @include animate(slide-right, 1.3s, ease-in, 1);
   }
   &__patrick {
-    color: set-color($very-dark-grayish-blue);
+    color: set-color($very-dark-grayish-blue); //white
     background-color: $very-dark-blackish-blue;
     @include animate(slide-left, 1.8s, ease-in, 1);
   }
   &__kira {
-    color: set-color($gray);
+    color: set-color($gray); //dark blue
     background-color: $gray;
     @include animate(slide-up, 1.5s, ease-in, 1);
   }
