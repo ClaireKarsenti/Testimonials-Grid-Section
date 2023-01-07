@@ -168,53 +168,62 @@ TESTIMONIAL CARDS
   /* ***DESKTOP*** */
   /********** MULTI STYLING **********/
 }
-.card__daniel {
+.card__moderate-violet {
+  background-color: hsl(263.1deg, 55.1%, 52%);
   color: hsl(0deg, 0%, 100%);
-  background: hsl(263.1deg, 55.1%, 52%) url(./images/bg-pattern-quotation.svg) no-repeat left 80% top 0%;
+}
+.card__very-dark-grayish-blue {
+  background-color: hsl(217deg, 19%, 35%);
+  color: hsl(0deg, 0%, 100%);
+}
+.card__gray {
+  background-color: rgba(255, 255, 255, 0.55);
+  color: hsl(219deg, 29%, 14%);
+}
+.card__very-dark-blackish-blue {
+  background-color: hsl(219deg, 29%, 14%);
+  color: hsl(0deg, 0%, 100%);
+}
+.card__moderate-violet {
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: left 80% top 0%;
   transition: 0.8s ease-in-out;
   animation: slide-down 1.5s ease-in 1;
 }
-.card__jonathan {
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(217deg, 19%, 35%);
+.card__very-dark-grayish-blue {
   animation: slide-left 1.3s ease-in 1;
 }
-.card__jeanette {
-  color: hsl(219deg, 29%, 14%);
-  background-color: rgba(255, 255, 255, 0.55);
-  animation: slide-right 1.3s ease-in 1;
-}
-.card__patrick {
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(219deg, 29%, 14%);
+.card__very-dark-blackish-blue {
   animation: slide-left 1.8s ease-in 1;
 }
-.card__kira {
-  color: hsl(219deg, 29%, 14%);
-  background-color: rgba(255, 255, 255, 0.55);
+.card__gray__jeanette {
+  animation: slide-right 1.3s ease-in 1;
+}
+.card__gray__kira {
   animation: slide-up 1.5s ease-in 1;
 }
 .card:hover {
   transform: scale(1.05);
 }
 @media screen and (min-width: 31.25em) {
-  .card__daniel {
+  .card__moderate-violet {
     grid-area: daniel;
     animation: slide-up 1.5s ease-in 1;
   }
-  .card__jonathan {
+  .card__very-dark-grayish-blue {
     grid-area: jonathon;
     animation: slide-down 1.3s ease-in 1;
   }
-  .card__jeanette {
-    grid-area: jeanette;
-    animation: slide-down 1.3s ease-in 1;
-  }
-  .card__patrick {
+  .card__very-dark-blackish-blue {
     grid-area: patrick;
     animation: slide-up 1.8s ease-in 1;
   }
-  .card__kira {
+  .card__gray__jeanette {
+    grid-area: jeanette;
+    animation: slide-down 1.3s ease-in 1;
+  }
+  .card__gray__kira {
     grid-area: kira;
     animation: slide-right 1.5s ease-in 1;
   }
@@ -223,13 +232,13 @@ TESTIMONIAL CARDS
   .card {
     padding: 1.875rem;
   }
-  .card__daniel {
+  .card__moderate-violet {
     animation: slide-down 1.5s ease-in 1;
   }
-  .card__jeanette {
+  .card__gray__jeanette {
     animation: slide-right 1.3s ease-in 1;
   }
-  .card__kira {
+  .card__gray__kira {
     animation: slide-left 1.5s ease-in 1;
   }
 }

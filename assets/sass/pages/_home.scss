@@ -12,32 +12,52 @@ TESTIMONIAL CARDS
   box-shadow: 0px 0.0625rem 0.9375rem 0.25rem $very-dark-gray;
   transition: $transition;
 
-  &__daniel {
-    color: set-color($moderate-violet); //white
-    background: $moderate-violet url(./images/bg-pattern-quotation.svg)
-      no-repeat left 80% top 0%;
+  $colors: moderate-violet hsl(263.1, 55.1%, 52%),
+    very-dark-grayish-blue hsl(217, 19%, 35%), gray rgba(255, 255, 255, 0.55),
+    very-dark-blackish-blue hsl(219, 29%, 14%);
+
+  @each $color in $colors {
+    &__#{nth($color, 1)} {
+      background-color: nth($color, 2);
+
+      @if (lightness(nth($color, 2)) > 60%) {
+        color: $very-dark-blackish-blue;
+      } @else {
+        color: $white;
+      }
+    }
+  }
+
+  &__moderate-violet {
+    // color: set-color($moderate-violet); //white
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: left 80% top 0%;
     transition: $transition;
     @include animate(slide-down, 1.5s, ease-in, 1);
   }
-  &__jonathan {
-    color: set-color($very-dark-grayish-blue); //white
-    background-color: $very-dark-grayish-blue;
+  &__very-dark-grayish-blue {
+    // color: set-color($very-dark-grayish-blue); //white
+    // background-color: $very-dark-grayish-blue;
     @include animate(slide-left, 1.3s, ease-in, 1);
   }
-  &__jeanette {
-    color: set-color($gray); //dark blue
-    background-color: $gray;
-    @include animate(slide-right, 1.3s, ease-in, 1);
-  }
-  &__patrick {
-    color: set-color($very-dark-grayish-blue); //white
-    background-color: $very-dark-blackish-blue;
+  &__very-dark-blackish-blue {
+    // color: set-color($very-dark-grayish-blue); //white
+    // background-color: $very-dark-blackish-blue;
     @include animate(slide-left, 1.8s, ease-in, 1);
   }
-  &__kira {
-    color: set-color($gray); //dark blue
-    background-color: $gray;
-    @include animate(slide-up, 1.5s, ease-in, 1);
+
+  &__gray {
+    &__jeanette {
+      // color: set-color($gray); //dark blue
+      // background-color: $gray;
+      @include animate(slide-right, 1.3s, ease-in, 1);
+    }
+    &__kira {
+      // color: set-color($gray); //dark blue
+      // background-color: $gray;
+      @include animate(slide-up, 1.5s, ease-in, 1);
+    }
   }
 
   /* HOVER STATE */
@@ -48,39 +68,44 @@ TESTIMONIAL CARDS
   /* ********** MEDIA QUERIES ********** */
   /* ***TABLET*** */
   @include media-min(31.25em) {
-    &__daniel {
+    &__moderate-violet {
       grid-area: daniel;
       @include animate(slide-up, 1.5s, ease-in, 1);
     }
-    &__jonathan {
+    &__very-dark-grayish-blue {
       grid-area: jonathon;
       @include animate(slide-down, 1.3s, ease-in, 1);
     }
-    &__jeanette {
-      grid-area: jeanette;
-      @include animate(slide-down, 1.3s, ease-in, 1);
-    }
-    &__patrick {
+    &__very-dark-blackish-blue {
       grid-area: patrick;
       @include animate(slide-up, 1.8s, ease-in, 1);
     }
-    &__kira {
-      grid-area: kira;
-      @include animate(slide-right, 1.5s, ease-in, 1);
+
+    &__gray {
+      &__jeanette {
+        grid-area: jeanette;
+        @include animate(slide-down, 1.3s, ease-in, 1);
+      }
+      &__kira {
+        grid-area: kira;
+        @include animate(slide-right, 1.5s, ease-in, 1);
+      }
     }
   }
 
   /* ***DESKTOP*** */
   @include media-min(62.5em) {
     padding: 1.875rem;
-    &__daniel {
+    &__moderate-violet {
       @include animate(slide-down, 1.5s, ease-in, 1);
     }
-    &__jeanette {
-      @include animate(slide-right, 1.3s, ease-in, 1);
-    }
-    &__kira {
-      @include animate(slide-left, 1.5s, ease-in, 1);
+    &__gray {
+      &__jeanette {
+        @include animate(slide-right, 1.3s, ease-in, 1);
+      }
+      &__kira {
+        @include animate(slide-left, 1.5s, ease-in, 1);
+      }
     }
   }
 
